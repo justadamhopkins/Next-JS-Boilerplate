@@ -11,11 +11,11 @@ type ThemedCssMethod = {
   [K in BreakpointKeys]: Function;
 };
 
-export const breakpoint = (Object.keys(breakpoints) as BreakpointKeys[]).reduce(
+export const breakpoint = Object.keys(breakpoints).reduce<ThemedCssMethod | {}>(
   (acc, key) => {
     acc[key] = (style: String) =>
       `@media (min-width: ${breakpoints[key]}) { ${style} }`;
     return acc;
   },
-  {} as ThemedCssMethod
+  {}
 );
