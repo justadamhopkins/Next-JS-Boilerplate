@@ -1,4 +1,4 @@
-export const breakpoints = {
+const breakpoints = {
   xs: "360px",
   sm: "520px",
   md: "768px",
@@ -6,16 +6,15 @@ export const breakpoints = {
 };
 
 type BreakpointKeys = keyof typeof breakpoints;
+type ThemedCss = Record<
+  BreakpointKeys,
+  (style: TemplateStringsArray) => string
+>;
 
-type ThemedCssMethod = {
-  [K in BreakpointKeys]: Function;
-};
-
-export const breakpoint = Object.keys(breakpoints).reduce<ThemedCssMethod | {}>(
-  (acc, key) => {
-    acc[key] = (style: String) =>
-      `@media (min-width: ${breakpoints[key]}) { ${style} }`;
-    return acc;
-  },
-  {}
-);
+export const breakpoint = Object.keys(breakpoints).reduce((acc, key) => {
+  return {
+    ...acc,
+    [key]: (style: string) =>
+      `@media (min-width: ${breakpoints[key as BreakpointKeys]}) { ${style} }`,
+  };
+}, {} as ThemedCss);
