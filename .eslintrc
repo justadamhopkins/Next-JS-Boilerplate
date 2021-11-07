@@ -1,3 +1,0 @@
-{
-  "extends": ["gristow", "plugin:@next/next/recommended"]
-}
