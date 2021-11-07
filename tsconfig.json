@@ -2,31 +2,17 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "atoms/*": [
-        "components/atoms/*"
-      ],
-      "molecules/*": [
-        "components/molecules/*"
-      ],
-      "organisms/*": [
-        "components/organisms/*"
-      ],
-      "templates/*": [
-        "components/templates/*"
-      ],
-      "shared/*": [
-        "components/shared/*"
-      ]
+      "atoms/*": ["components/atoms/*"],
+      "molecules/*": ["components/molecules/*"],
+      "organisms/*": ["components/organisms/*"],
+      "templates/*": ["components/templates/*"],
+      "shared/*": ["components/shared/*"]
     },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -41,9 +27,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
     "index.test.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules", ".next", ".vercel", "out"]
 }
