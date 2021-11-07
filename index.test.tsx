@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import HomePage from "./pages";
+import HomePage from "./src/pages";
 
 describe("App", () => {
   it("renders without crashing", () => {

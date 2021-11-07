@@ -6,7 +6,10 @@
       "molecules/*": ["components/molecules/*"],
       "organisms/*": ["components/organisms/*"],
       "templates/*": ["components/templates/*"],
-      "shared/*": ["components/shared/*"]
+      "shared/*": ["components/shared/*"],
+      "styles/*": ["styles/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
