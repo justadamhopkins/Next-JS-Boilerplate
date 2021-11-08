@@ -1,8 +1,8 @@
 const breakpoints = {
-  xs: "360px",
-  sm: "520px",
-  md: "768px",
-  lg: "1200px",
+  xs: '360px',
+  sm: '520px',
+  md: '768px',
+  lg: '1200px',
 };
 
 type BreakpointKeys = keyof typeof breakpoints;

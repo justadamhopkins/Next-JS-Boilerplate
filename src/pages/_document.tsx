@@ -1,6 +1,6 @@
-import { RenderPageResult } from "../../next-server-utils";
-import Document, { DocumentContext } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import { RenderPageResult } from '../../next-server-utils';
+import Document, { DocumentContext } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
