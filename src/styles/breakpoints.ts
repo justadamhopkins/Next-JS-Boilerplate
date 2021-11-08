@@ -5,9 +5,9 @@ const breakpoints = {
   lg: '1200px',
 };
 
-type BreakpointKeys = keyof typeof breakpoints;
-type ThemedCss = Record<
-  BreakpointKeys,
+type TBreakpointKeys = keyof typeof breakpoints;
+type TThemedCss = Record<
+  TBreakpointKeys,
   (style: TemplateStringsArray) => string
 >;
 
@@ -15,6 +15,6 @@ export const breakpoint = Object.keys(breakpoints).reduce((acc, key) => {
   return {
     ...acc,
     [key]: (style: string) =>
-      `@media (min-width: ${breakpoints[key as BreakpointKeys]}) { ${style} }`,
+      `@media (min-width: ${breakpoints[key as TBreakpointKeys]}) { ${style} }`,
   };
-}, {} as ThemedCss);
+}, {} as TThemedCss);
