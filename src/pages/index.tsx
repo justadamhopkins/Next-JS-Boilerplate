@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import { breakpoint } from "../styles/breakpoints";
+import { breakpoint } from '../styles/breakpoints';
 
 const H1 = styled.h1`
   color: red;
