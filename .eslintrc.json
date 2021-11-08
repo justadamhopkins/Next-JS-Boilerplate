@@ -23,7 +23,8 @@
   // all plugins (eslint-plugin-xxx) go here:
   "plugins": [
     "@typescript-eslint",
-    "@next/eslint-plugin-next" // https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next/lib/index.js
+    "@next/eslint-plugin-next", // https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next/lib/index.js
+    "jsx-a11y"
   ],
   "ignorePatterns": [".eslintrc.json"],
 
@@ -47,6 +48,28 @@
     ],
     "react/sort-comp": [0],
     "react/jsx-props-no-spreading": [0],
-    "react/jsx-one-expression-per-line": [0]
+    "react/jsx-one-expression-per-line": [0],
+    "jsx-a11y/anchor-is-valid": [0],
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error", "info"]
+      }
+    ],
+    "no-var": "error",
+    "radix": "error",
+    "semi": "error",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "prefer-arrow-callback": 1,
+    "default-case": "warn",
+    "no-trailing-spaces": 1,
+    "jsx-quotes": ["error", "prefer-double"]
   }
 }
