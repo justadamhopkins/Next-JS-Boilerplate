@@ -25,11 +25,13 @@
     "@typescript-eslint",
     "@next/eslint-plugin-next" // https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next/lib/index.js
   ],
+  "ignorePatterns": [".eslintrc.json"],
 
   // all configs (eslint-config-xxx) go here:
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking", // contains rules that specifically require type information
     "plugin:@next/next/recommended",
@@ -37,6 +39,14 @@
     "next/core-web-vitals"
   ],
   "rules": {
-    // ...add rules which you'd like to disable
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "react/sort-comp": [0],
+    "react/jsx-props-no-spreading": [0],
+    "react/jsx-one-expression-per-line": [0]
   }
 }
