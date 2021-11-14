@@ -13,4 +13,6 @@ module.exports = {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/src',
   }),
+  clearMocks: true,
+  testURL: 'https://www.mockdomain.com',
 };
