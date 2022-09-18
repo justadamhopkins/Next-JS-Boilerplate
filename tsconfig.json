@@ -1,21 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "paths": {
-      "atoms/*": ["components/atoms/*"],
-      "molecules/*": ["components/molecules/*"],
-      "organisms/*": ["components/organisms/*"],
-      "templates/*": ["components/templates/*"],
-      "shared/*": ["components/shared/*"],
-      "styles/*": ["styles/*"],
-      "types/*": ["types/*"],
-      "utils/*": ["utils/*"]
-    },
+    "baseUrl": ".",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -24,14 +18,49 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "paths": {
+      "@atoms/*": [
+        "src/components/_atoms/*"
+      ],
+      "@molecules/*": [
+        "src/components/_molecules/*"
+      ],
+      "@organisms/*": [
+        "src/components/_organisms/*"
+      ],
+      "@shared/*": [
+        "src/components/_shared/*"
+      ],
+      "@templates/*": [
+        "src/components/_templates/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "common/types/*": [
+        "src/types/*"
+      ],
+      "common/utils/*": [
+        "src/utils/*"
+      ],
+      "test-utils": [
+        "src/utils/tests"
+      ],
+      "lodash/*": [
+        "node_modules/@types/lodash-es/*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "index.test.js"
+    "**/*.tsx"
   ],
-  "exclude": ["node_modules", ".next", ".vercel", "out"]
+  "exclude": [
+    "node_modules",
+    "next.config.js",
+    "postcss.config.js",
+    ".next",
+    "src/**/__mocks__/*"
+  ]
 }
