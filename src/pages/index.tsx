@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import React from 'react';
 import styled from 'styled-components';
 
 import { breakpoint } from '../styles/breakpoints';

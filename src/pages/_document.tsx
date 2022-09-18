@@ -1,4 +1,5 @@
 import Document, { DocumentContext } from 'next/document';
+import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
 import { RenderPageResult } from '../../next-server-utils';

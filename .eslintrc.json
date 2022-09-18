@@ -1,103 +1,84 @@
 {
   "root": true,
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json", // tells parser relative path of tsconfig.json
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    "project": "./tsconfig.json"
   },
-
-  // all plugins (eslint-plugin-xxx) go here:
   "plugins": [
+    "jest",
     "@typescript-eslint",
-    "@next/eslint-plugin-next", // https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next/lib/index.js
-    "jsx-a11y"
+    "@next/eslint-plugin-next",
+    "import",
+    "react-hooks",
+    "jsx-a11y",
+    "react",
+    "unused-imports"
   ],
-  "ignorePatterns": [".eslintrc.json"],
-
-  // all configs (eslint-config-xxx) go here:
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking", // contains rules that specifically require type information
-    "plugin:@next/next/recommended",
-    "next", // https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/package.json
-    "next/core-web-vitals"
+    "plugin:@next/next/recommended"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "ignorePatterns": [
+    ".eslintrc.json",
+    "config/*",
+    "testCoverage/*",
+    "middleware/*",
+    "build/*",
+    "lambdas/*",
+    "next.config.js",
+    "__mocks__/**/*",
+    "src/**/__mocks__/*",
+    "src/**/*.stories.*",
+    "jest.config.js",
+    "package.json",
+    "package-lock.json",
+    "storybook-static/*",
+    "next-env.d.ts",
+    "*.config.js",
+    "*.config.json",
+    "reports/*",
+    "public/mockServiceWorker.js"
   ],
   "rules": {
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".tsx"]
+        "extensions": [
+          ".tsx"
+        ]
       }
     ],
-    "react/sort-comp": [0],
-    "react/jsx-props-no-spreading": [0],
-    "react/jsx-one-expression-per-line": [0],
-    "jsx-a11y/anchor-is-valid": [0],
-    "no-console": [
+    "react/sort-comp": [
+      0
+    ],
+    "react/jsx-props-no-spreading": [
+      0
+    ],
+    "react/jsx-one-expression-per-line": [
+      0
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      0
+    ],
+    "react/jsx-boolean-value": [
       "error",
-      {
-        "allow": ["warn", "error", "info"]
-      }
+      "always"
     ],
-    "no-var": "error",
-    "radix": "error",
-    "semi": "error",
-    "quotes": [
-      "error",
-      "single",
-      {
-        "avoidEscape": true,
-        "allowTemplateLiterals": true
-      }
-    ],
-    "prefer-arrow-callback": 1,
-    "default-case": "warn",
-    "no-trailing-spaces": 1,
-    "jsx-quotes": ["error", "prefer-double"],
-    "max-len": [
-      "error",
-      {
-        "code": 120,
-        "tabWidth": 2,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignoreComments": true,
-        "ignoreTrailingComments": true,
-        "ignoreUrls": true
-      }
-    ],
-    "no-bitwise": 2,
-    "no-multiple-empty-lines": 2,
-    "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"],
-    "no-debugger": 1,
-    "no-duplicate-imports": "error",
-    "no-empty": "error",
-    "no-eval": "error",
-    "react/jsx-boolean-value": ["error", "always"],
-    "@typescript-eslint/ban-types": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-unused-vars": [
       "error",
-      { "argsIgnorePattern": "^_", "ignoreRestSiblings": true }
+      {
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
     ],
     "import/order": [
       "error",
@@ -115,7 +96,9 @@
           "order": "asc",
           "caseInsensitive": true
         },
-        "pathGroupsExcludedImportTypes": ["builtin"],
+        "pathGroupsExcludedImportTypes": [
+          "builtin"
+        ],
         "pathGroups": [
           {
             "pattern": "^(?!(common|@lick|@server|~src|\\.)).+",
@@ -141,36 +124,107 @@
         ]
       }
     ],
+    "align": 0,
+    "ban": 0,
+    "curly": 2,
+    "guard-for-in": 1,
+    "indent": [
+      2,
+      2
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true
+      }
+    ],
+    "no-bitwise": 2,
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "debug",
+          "error",
+          "info",
+          "time",
+          "timeEnd",
+          "trace"
+        ]
+      }
+    ],
+    "no-multiple-empty-lines": 2,
+    "no-shadow": 2,
+    "no-debugger": 1,
+    "no-duplicate-imports": "error",
+    "no-empty": "error",
+    "no-eval": "error",
+    "default-case": "warn",
+    "no-trailing-spaces": 1,
+    "no-var": "error",
+    "radix": "error",
+    "semi": "error",
+    "eqeqeq": [
+      "error",
+      "always",
+      {
+        "null": "ignore"
+      }
+    ],
     "@typescript-eslint/naming-convention": [
       "warn",
       {
         "selector": "default",
-        "format": ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"],
-        "leadingUnderscore": "allowSingleOrDouble"
-      },
-      {
-        "selector": "variable",
-        "format": ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"],
-        "leadingUnderscore": "allowSingleOrDouble"
-      },
-      {
-        "selector": "parameter",
-        "format": ["camelCase", "PascalCase", "snake_case"],
-        "leadingUnderscore": "allowSingleOrDouble"
-      },
-      {
-        "selector": "memberLike",
-        "modifiers": ["private"],
-        "format": ["camelCase"],
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ],
         "leadingUnderscore": "allow"
       },
       {
+        "selector": "variable",
+        "format": [
+          "camelCase",
+          "UPPER_CASE",
+          "PascalCase"
+        ]
+      },
+      {
+        "selector": "parameter",
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "memberLike",
+        "modifiers": [
+          "private"
+        ],
+        "format": [
+          "camelCase"
+        ],
+        "leadingUnderscore": "require"
+      },
+      {
         "selector": "typeLike",
-        "format": ["PascalCase"]
+        "format": [
+          "PascalCase"
+        ]
       },
       {
         "selector": "interface",
-        "format": ["PascalCase"],
+        "format": [
+          "PascalCase"
+        ],
         "custom": {
           "regex": "^I[A-Z]",
           "match": true
@@ -178,7 +232,9 @@
       },
       {
         "selector": "typeAlias",
-        "format": ["PascalCase"],
+        "format": [
+          "PascalCase"
+        ],
         "custom": {
           "regex": "^T[A-Z]",
           "match": true
@@ -186,13 +242,33 @@
       },
       {
         "selector": "enum",
-        "format": ["PascalCase"],
+        "format": [
+          "PascalCase"
+        ],
         "custom": {
           "regex": "^E[A-Z]",
           "match": true
         }
       }
     ],
+    "@typescript-eslint/adjacent-overload-signatures": "error",
+    "@typescript-eslint/typedef": "error",
+    "@typescript-eslint/no-submodule-imports": 0,
+    "@typescript-eslint/array-type": 0,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/jsx-boolean-value": 0,
+    "@typescript-eslint/jsx-wrap-multiline": 0,
+    "@typescript-eslint/member-access": 0,
+    "@typescript-eslint/no-empty-interface": 2,
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/object-literal-sort-keys": 0,
+    "prefer-arrow-callback": 1,
+    "@typescript-eslint/prefer-for-of": 1,
     "@typescript-eslint/no-implicit-dependencies": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
