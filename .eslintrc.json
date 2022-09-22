@@ -44,7 +44,8 @@
     "*.config.js",
     "*.config.json",
     "reports/*",
-    "public/mockServiceWorker.js"
+    "public/mockServiceWorker.js",
+    "public/__ENV.js"
   ],
   "rules": {
     "react/jsx-filename-extension": [
