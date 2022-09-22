@@ -19,6 +19,9 @@
 # misc
 .DS_Store
 *.pem
+.env
+.env.local
+.eslintcache
 
 # debug
 npm-debug.log*
@@ -34,3 +37,6 @@ yarn-error.log*
 # vercel
 .vercel
 .yarn
+
+# project specific
+public/__ENV.js
