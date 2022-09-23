@@ -7138,6 +7138,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.0.2":
+  version: 16.0.2
+  resolution: "dotenv@npm:16.0.2"
+  checksum: ca8f9ca2d67929c7771069f4c31b4e46b9932621009e658e5afd655dde2d69b77642bf36dbc9e72bc170523dfd908a9ee41c26f034c1fdc605ace3b1b4b10faf
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:^6.2.0":
   version: 6.2.0
   resolution: "dotenv@npm:6.2.0"
@@ -12390,6 +12397,7 @@ __metadata:
     babel-jest: 27.3.1
     babel-loader: 8.2.3
     babel-plugin-styled-components: 1.12.0
+    dotenv: ^16.0.2
     eslint: 7.8.1
     eslint-config-airbnb: 18.2.0
     eslint-config-next: 12.0.3
