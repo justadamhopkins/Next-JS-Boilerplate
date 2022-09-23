@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development react-env -p ./configs/env/.env.local next dev",
+    "dev": "NODE_ENV=development react-env -p ./configs/env/.env.local -- next dev",
     "build": "next build",
     "start": "next start",
     "test": "jest",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@beam-australia/react-env": "3.1.1",
-    "dotenv": "^16.0.2",
+    "dotenv": "16.0.2",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",

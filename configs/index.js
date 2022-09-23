@@ -3,9 +3,10 @@ const fs = require('fs');
 
 const BUILD_ENV =
   process.env.BUILD_ENV || process.env.REACT_APP_BUILD_ENV || 'production';
+
 const CONFIG_FILE_PATH = path.resolve(__dirname, `./env/.env.${BUILD_ENV}`);
 
-console.info(`⚙️  Public Config file: ${CONFIG_FILE_PATH}`);
+console.info(`⚙️Public Config file: ${CONFIG_FILE_PATH}`);
 
 try {
   fs.statSync(CONFIG_FILE_PATH);
