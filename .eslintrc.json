@@ -27,7 +27,7 @@
   },
   "ignorePatterns": [
     ".eslintrc.json",
-    "config/*",
+    "configs/*",
     "testCoverage/*",
     "middleware/*",
     "build/*",
