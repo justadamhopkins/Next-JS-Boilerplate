@@ -1,62 +1,42 @@
 {
   "compilerOptions": {
+    "outDir": "build",
     "baseUrl": ".",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
-      "@atoms/*": [
-        "src/components/_atoms/*"
-      ],
-      "@molecules/*": [
-        "src/components/_molecules/*"
-      ],
-      "@organisms/*": [
-        "src/components/_organisms/*"
-      ],
-      "@shared/*": [
-        "src/components/_shared/*"
-      ],
-      "@templates/*": [
-        "src/components/_templates/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "common/types/*": [
-        "src/types/*"
-      ],
-      "common/utils/*": [
-        "src/utils/*"
-      ],
-      "test-utils": [
-        "src/utils/tests"
-      ],
-      "lodash/*": [
-        "node_modules/@types/lodash-es/*"
-      ]
+      "@atoms/*": ["src/components/_atoms/*"],
+      "@molecules/*": ["src/components/_molecules/*"],
+      "@organisms/*": ["src/components/_organisms/*"],
+      "@shared/*": ["src/components/_shared/*"],
+      "@templates/*": ["src/components/_templates/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "common/types/*": ["src/types/*"],
+      "common/utils/*": ["src/utils/*"],
+      "test-utils": ["src/utils/tests"]
     },
     "incremental": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
     "next.config.js",
