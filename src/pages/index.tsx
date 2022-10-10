@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import styled from 'styled-components';
 
-import { breakpoint } from '../styles/breakpoints';
+import { breakpoint } from '../styles/utilities/breakpoints';
 
 const H1 = styled.h1`
   color: red;
@@ -18,9 +18,8 @@ const HomePage = () => {
         <title>Adam Hopkins boilerplate next js</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <H1>dog</H1>
-      </main>
+
+      <H1>dog</H1>
     </>
   );
 };
