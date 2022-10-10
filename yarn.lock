@@ -12624,7 +12624,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     styled-components: 5.3.6
-    styled-reset: 4.3.4
+    styled-normalize: ^8.0.7
     ts-jest: 27.0.7
     tsconfig-paths-webpack-plugin: 3.5.1
     typescript: 4.8.4
@@ -15795,12 +15795,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-reset@npm:4.3.4":
-  version: 4.3.4
-  resolution: "styled-reset@npm:4.3.4"
+"styled-normalize@npm:^8.0.7":
+  version: 8.0.7
+  resolution: "styled-normalize@npm:8.0.7"
   peerDependencies:
-    styled-components: ">=4.0.0 || >=5.0.0"
-  checksum: 2a652f1d0276badcf779315589dd1fd5bb3744d619b8caa068c4fd42ab1dd725c59a3e594d62575b6ad8b8e59cf2c155a9036fe473688641d0f583983bc9a6af
+    styled-components: ^4.0.0 || ^5.0.0
+  checksum: afdb450407ec4dcd41b4806a1193060e128f617fbbb6c14cc8679f9a651b93afc54bd13035c84aec3c298a7ae0084aef4a8a651c082c9bf209843b17cfc73305
   languageName: node
   linkType: hard
 
