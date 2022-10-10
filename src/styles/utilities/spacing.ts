@@ -1,5 +1,4 @@
 const BASE_SPACING = 8;
-export const SITE_WIDE_MAX_WIDTH = 1920;
 
 const spacingDivideBy = (
   increment: number,

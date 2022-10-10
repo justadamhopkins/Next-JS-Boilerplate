@@ -1,7 +1,7 @@
-import { SITE_WIDE_MAX_WIDTH } from '@styles/utilities/spacing';
 import styled from 'styled-components';
 
 export const Wrapper = styled.main`
-  max-width: ${SITE_WIDE_MAX_WIDTH}px;
+  max-width: var(--site-max-width);
   margin: 0 auto;
+  width: 100%;
 `;

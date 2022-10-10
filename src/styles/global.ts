@@ -1,11 +1,10 @@
+import { Settings } from '@styles/utilities/settings';
 import { Typography } from '@styles/utilities/typography';
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
 export const GlobalStyles = createGlobalStyle`
-  :root {
-  }
-
+  ${Settings}
   ${normalize}
   *, *:before, *:after {
     box-sizing: inherit;
