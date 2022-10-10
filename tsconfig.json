@@ -30,6 +30,7 @@
       "@shared/*": ["src/components/_shared/*"],
       "@templates/*": ["src/components/_templates/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@styles/*": ["src/styles/*"],
       "common/types/*": ["src/types/*"],
       "common/utils/*": ["src/utils/*"],
       "test-utils": ["src/utils/tests"]
