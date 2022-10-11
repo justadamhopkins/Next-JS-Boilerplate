@@ -2,22 +2,22 @@ import { css } from 'styled-components';
 
 export const Fonts = css`
   @font-face {
-    font-family: 'PUT FONT NAME HERE';
-    src: local('PUT FONT NAME HERE'), local('PUT FONT NAME HERE'),
-      url(${'PUT FONT PATH HERE'}) format('woff2'),
-      url(${'PUT FONT PATH HERE'}) format('woff'),
-      url(${'PUT FONT PATH HERE'}) format('otf');
-    font-weight: normal;
+    font-family: 'Nunito Sans';
+    src: url('/fonts/NunitoSans-Bold.woff2') format('woff2'),
+      url('/fonts/NunitoSans-Bold.woff') format('woff'),
+      url('/fonts/NunitoSans-Bold.ttf') format('ttf');
+    font-weight: bold;
     font-style: normal;
+    font-display: swap;
   }
 
   @font-face {
-    font-family: 'PUT FONT NAME HERE';
-    src: local('PUT FONT NAME HERE'), local('PUT FONT NAME HERE'),
-      url(${'PUT FONT PATH HERE'}) format('woff2'),
-      url(${'PUT FONT PATH HERE'}) format('woff'),
-      url(${'PUT FONT PATH HERE'}) format('otf');
+    font-family: 'Nunito Sans';
+    src: url('/fonts/NunitoSans-Regular.woff2') format('woff2'),
+      url('/fonts/NunitoSans-Regular.woff') format('woff'),
+      url('/fonts/NunitoSans-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
 `;
