@@ -1,3 +1,4 @@
+import { Fonts } from '@styles/utilities/fonts';
 import { Settings } from '@styles/utilities/settings';
 import { Typography } from '@styles/utilities/typography';
 import { createGlobalStyle } from 'styled-components';
@@ -25,5 +26,6 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
   }
 
+  ${Fonts}
   ${Typography}
 `;
