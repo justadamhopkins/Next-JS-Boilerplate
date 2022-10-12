@@ -1,15 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import styled from 'styled-components';
-
-import { breakpoint } from '../styles/utilities/breakpoints';
-
-const H1 = styled.h1`
-  color: red;
-  ${breakpoint.md`
-    color: orange;
-  `}
-`;
 
 const HomePage = () => {
   return (
@@ -19,7 +9,13 @@ const HomePage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <H1>dog</H1>
+      <h1>dog</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+        molestiae, nobis. Ad aliquam aspernatur dolores harum ipsa omnis
+        possimus quo rerum vero. Dolore dolorem neque numquam perspiciatis
+        provident rerum voluptatum?
+      </p>
     </>
   );
 };
