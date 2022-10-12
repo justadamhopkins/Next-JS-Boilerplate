@@ -1,3 +1,4 @@
+import { breakpoint } from '@styles/utilities/breakpoints';
 import { fontFamilys } from '@styles/utilities/fonts';
 import { EHeadingLevel } from 'common/types/enums/typography';
 import { css } from 'styled-components';
@@ -18,22 +19,36 @@ export const headingStyles: Record<EHeadingLevel, ReturnType<typeof css>> = {
   [EHeadingLevel.Three]: css`
     font-size: 2.369rem;
     font-family: ${fontFamilys.nunitoSans};
-    font-weight: bold;
+    font-weight: 600;
     font-style: normal;
   `,
   [EHeadingLevel.Four]: css`
     font-size: 1.777rem;
     font-family: ${fontFamilys.nunitoSans};
-    font-weight: bold;
+    font-weight: 600;
     font-style: normal;
   `,
   [EHeadingLevel.Five]: css`
     font-size: 1.333rem;
     font-family: ${fontFamilys.nunitoSans};
-    font-weight: bold;
+    font-weight: 600;
     font-style: normal;
   `,
 };
+
+export const paragraphStyles = css`
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-family: ${fontFamilys.nunitoSans};
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 1px;
+  margin: 0;
+
+  ${breakpoint.md`
+    font-size: 2rem;
+  `};
+`;
 
 export const Typography = css`
   h1,
@@ -64,5 +79,13 @@ export const Typography = css`
 
   h5 {
     ${headingStyles.h5}
+  }
+
+  p {
+    ${paragraphStyles}
+  }
+
+  small {
+    font-size: 0.75rem;
   }
 `;
