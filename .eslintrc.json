@@ -72,6 +72,9 @@
       "error",
       "always"
     ],
+    "@typescript-eslint/no-shadow": [
+      "error"
+    ],
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-unused-vars": [
@@ -162,7 +165,7 @@
       }
     ],
     "no-multiple-empty-lines": 2,
-    "no-shadow": 2,
+    "no-shadow": "off",
     "no-debugger": 1,
     "no-duplicate-imports": "error",
     "no-empty": "error",
