@@ -21,3 +21,7 @@ export const Fonts = css`
     font-display: swap;
   }
 `;
+
+export const fontFamilys = {
+  nunitoSans: "'Nunito Sans', serif",
+};
