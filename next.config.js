@@ -5,7 +5,7 @@ import path from 'path';
 const nextConfig = {
   swcMinify: true,
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, 'src', 'styles')],
   },
   compiler: {
     styledComponents: true,
