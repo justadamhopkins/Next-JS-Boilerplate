@@ -1,9 +1,9 @@
-import { GlobalStyles } from '@styles/global';
 import { AppProps } from 'next/app';
 import React from 'react';
 
 import AppContainer from '../components/shared/global/AppContainer';
-import '../../styles/global.scss';
+import { GlobalStyles } from '../stylesd/global';
+import '../styles/global.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
