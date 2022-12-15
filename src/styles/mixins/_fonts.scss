@@ -1,0 +1,10 @@
+@mixin setFontFace($font-face-family, $font-face-filename, $font-face-weight, $font-face-style :normal) {
+  @font-face {
+    font-family: '#{$font-face-family}';
+    src: url(('/fonts/#{$font-face-filename}.woff2')) format('woff2'),
+    url(('/fonts/#{$font-face-filename}.woff')) format('woff'),
+    url(('/fonts/#{$font-face-filename}.ttf')) format('ttf');
+    font-weight: $font-face-weight;
+    font-style: $font-face-style;
+  }
+}
