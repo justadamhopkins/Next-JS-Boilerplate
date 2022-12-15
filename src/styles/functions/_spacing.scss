@@ -1,0 +1,32 @@
+@function spacing($increment: 1) {
+  $space-base: 8px;
+
+  @if $increment <=0.25 {
+    // 2
+    @return $space-base * 0.25;
+  }
+
+  @if $increment <=0.5 {
+    // 4
+    @return $space-base * 0.5;
+  }
+
+  @if $increment <=0.75 {
+    // 6
+    @return $space-base * 0.75;
+  }
+
+  @if $increment <=1 {
+    // 8
+    @return $space-base * 1;
+  }
+
+  @if $increment <=1.5 {
+    // 12
+    @return $space-base * 1.5;
+  }
+
+  // round to whole number increments to ensure only 8px steps
+  $roundedInc: round($increment);
+  @return $space-base * $roundedInc;
+}
