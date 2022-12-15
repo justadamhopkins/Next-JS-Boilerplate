@@ -1,8 +1,9 @@
-import { Fonts } from '@styles/utilities/fonts';
-import { Settings } from '@styles/utilities/settings';
-import { Typography } from '@styles/utilities/typography';
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+
+import { Fonts } from './/utilities/fonts';
+import { Settings } from './/utilities/settings';
+import { Typography } from './/utilities/typography';
 
 export const GlobalStyles = createGlobalStyle`
   ${Settings}
