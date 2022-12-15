@@ -10,6 +10,6 @@
 }
 
 $nunitoSans: "'Nunito Sans', serif",;
-@include setFontFace('#{$nunitoSansBold}', 'NunitoSans-Bold', bold);
-@include setFontFace('#{$nunitoSansBold}', 'NunitoSans-Regular', normal);
-@include setFontFace('#{$nunitoSansBold}', 'NunitoSans-SemiBold', 600);
+@include setFontFace('#{$nunitoSans}', 'NunitoSans-Bold', bold);
+@include setFontFace('#{$nunitoSans}', 'NunitoSans-Regular', normal);
+@include setFontFace('#{$nunitoSans}', 'NunitoSans-SemiBold', 600);
