@@ -5277,6 +5277,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"async@npm:^3.2.3":
+  version: 3.2.4
+  resolution: "async@npm:3.2.4"
+  checksum: 43d07459a4e1d09b84a20772414aa684ff4de085cbcaec6eea3c7a8f8150e8c62aa6cd4e699fe8ee93c3a5b324e777d34642531875a0817a35697522c1b02e89
+  languageName: node
+  linkType: hard
+
 "asynckit@npm:^0.4.0":
   version: 0.4.0
   resolution: "asynckit@npm:0.4.0"
@@ -10674,6 +10681,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"isomorphic-style-loader@npm:^5.3.2":
+  version: 5.3.2
+  resolution: "isomorphic-style-loader@npm:5.3.2"
+  dependencies:
+    hoist-non-react-statics: ^3.0.0
+    loader-utils: ^1.2.3
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  checksum: 3f8f3d847b03b835ec49c61ff4aeadae23af5b26295ee28ff18dcb93ec2c8f9d99bc573091cb9980fa2497e2da99990822ed64f32e509181c8fa8dd64cec938d
+  languageName: node
+  linkType: hard
+
 "isomorphic-unfetch@npm:^3.1.0":
   version: 3.1.0
   resolution: "isomorphic-unfetch@npm:3.1.0"
@@ -12643,6 +12664,7 @@ __metadata:
     eslint-plugin-unused-imports: 2.0.0
     husky: ">=6"
     identity-obj-proxy: 3.0.0
+    isomorphic-style-loader: ^5.3.2
     jest: 27.3.1
     lint-staged: ">=10"
     next: 12.3.0
@@ -12650,6 +12672,8 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     sass: 1.56.2
+    sass-loader: ^13.2.0
+    sass-resources-loader: ^2.2.5
     styled-components: 5.3.6
     styled-normalize: ^8.0.7
     ts-jest: 27.0.7
@@ -14837,6 +14861,43 @@ __metadata:
   bin:
     sane: ./src/cli.js
   checksum: 97716502d456c0d38670a902a4ea943d196dcdf998d1e40532d8f3e24e25d7eddfd4c3579025a1eee8eac09a48dfd05fba61a2156c56704e7feaa450eb249f7c
+  languageName: node
+  linkType: hard
+
+"sass-loader@npm:^13.2.0":
+  version: 13.2.0
+  resolution: "sass-loader@npm:13.2.0"
+  dependencies:
+    klona: ^2.0.4
+    neo-async: ^2.6.2
+  peerDependencies:
+    fibers: ">= 3.1.0"
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+    sass: ^1.3.0
+    sass-embedded: "*"
+    webpack: ^5.0.0
+  peerDependenciesMeta:
+    fibers:
+      optional: true
+    node-sass:
+      optional: true
+    sass:
+      optional: true
+    sass-embedded:
+      optional: true
+  checksum: ed6cdb5f5508e1a8a020d1451160a5e94805d0c2a97be5719c6a44ed28a258b5f37a1478d01b9d545f269367ae91ccb88adc93bd6202bfd609dbe3193228d51e
+  languageName: node
+  linkType: hard
+
+"sass-resources-loader@npm:^2.2.5":
+  version: 2.2.5
+  resolution: "sass-resources-loader@npm:2.2.5"
+  dependencies:
+    async: ^3.2.3
+    chalk: ^4.1.0
+    glob: ^7.1.6
+    loader-utils: ^2.0.0
+  checksum: 7b406e7b31abd053c4a3a87825bbb20cdf89a5f7e189a4d9cd0607a3e35c1e48a6a680336a34ff842ae71e7f67d95b942bba98cfb2ccb836e98f8e1e371c534c
   languageName: node
   linkType: hard
 
