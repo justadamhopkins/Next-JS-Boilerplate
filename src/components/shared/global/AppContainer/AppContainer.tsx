@@ -1,9 +1,10 @@
+import classNames from 'classnames';
 import React, { FC, ReactNode } from 'react';
 
-import { Wrapper } from './AppContainer.styled';
+import styles from './AppContainer.module.scss';
 
 const AppContainer: FC = ({ children }: { children: ReactNode }) => {
-  return <Wrapper>{children}</Wrapper>;
+  return <main className={classNames(styles.test)}>{children}</main>;
 };
 
 export default AppContainer;
