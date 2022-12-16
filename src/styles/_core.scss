@@ -1,3 +1,3 @@
-@use "core/vars" as *;
-@use "mixins/breakpoints" as *;
-@use "mixins/typography" as *;
+@forward "core/vars";
+@forward "mixins/breakpoints";
+@forward "mixins/typography";
