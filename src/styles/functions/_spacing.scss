@@ -1,32 +1,33 @@
-@function spacing($increment: 1) {
-  $space-base: 8px;
-
+@function spacing($increment: 1, $divideBy: 0) {
   @if $increment <=0.25 {
     // 2
-    @return $space-base * 0.25;
+    @return spacingDivideBy(0.25, $divideBy);
   }
-
   @if $increment <=0.5 {
     // 4
-    @return $space-base * 0.5;
+    @return spacingDivideBy(0.5, $divideBy);
   }
-
   @if $increment <=0.75 {
     // 6
-    @return $space-base * 0.75;
+    @return spacingDivideBy(0.75, $divideBy);
   }
-
   @if $increment <=1 {
     // 8
-    @return $space-base * 1;
+    @return spacingDivideBy(1, $divideBy);
   }
-
   @if $increment <=1.5 {
     // 12
-    @return $space-base * 1.5;
+    @return spacingDivideBy(1.5, $divideBy);
   }
-
   // round to whole number increments to ensure only 8px steps
   $roundedInc: round($increment);
-  @return $space-base * $roundedInc;
+  @return spacingDivideBy($roundedInc, $divideBy);
+}
+
+@function spacingDivideBy($increment, $divideBy: 0) {
+  $val: calc($increment * $spacingBase);
+  @if $divideBy == 0 {
+    @return #{$val}px;
+  }
+  @return #{calc($val / $divideBy)}px;
 }
