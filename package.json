@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@beam-australia/react-env": "3.1.1",
+    "axios": "^1.2.3",
     "classnames": "^2.3.2",
     "dotenv": "16.0.2",
     "next": "13.0.7",
@@ -38,7 +39,8 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@types/jest": "27.0.2",
-    "@types/react": "17.0.3",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
     "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
@@ -66,6 +68,10 @@
     "ts-jest": "27.0.7",
     "tsconfig-paths-webpack-plugin": "3.5.1",
     "typescript": "4.8.4"
+  },
+  "resolutions": {
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md}": [
