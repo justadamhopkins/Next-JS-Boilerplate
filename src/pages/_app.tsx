@@ -1,15 +1,20 @@
 import { AppProps } from 'next/app';
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  dehydrate,
   DehydratedState,
   Hydrate,
   QueryClient,
   QueryClientProvider,
+  dehydrate,
 } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
-import AppContainer from '../components/shared/global/AppContainer';
+import {
+  FIFTEEN_MINUTES_IN_MS,
+  FIVE_MINUTES_IN_MS,
+} from '@common/constants/times';
+import AppContainer from '@core/AppContainer';
+
 import '@styles/styles.scss';
 
 type TCoreAppProps = AppProps & {
@@ -17,7 +22,19 @@ type TCoreAppProps = AppProps & {
 };
 
 const CoreApp = ({ Component, reactQueryProps, pageProps }: TCoreAppProps) => {
-  const [queryClient] = React.useState(() => new QueryClient());
+  const [queryClient] = useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            refetchOnWindowFocus: false,
+            keepPreviousData: true,
+            cacheTime: FIFTEEN_MINUTES_IN_MS,
+            staleTime: FIVE_MINUTES_IN_MS,
+          },
+        },
+      }),
+  );
 
   return (
     <QueryClientProvider client={queryClient}>
