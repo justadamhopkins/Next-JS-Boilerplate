@@ -2,6 +2,27 @@
   "name": "next_js_boilerplate",
   "version": "0.1.0",
   "private": true,
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "src/**/*.{css,scss,json}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "dev": "NODE_ENV=development react-env -p ./configs/env/.env.local -- next dev",
     "build": "next build",
@@ -42,22 +63,22 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@types/styled-components": "5.1.26",
-    "@typescript-eslint/eslint-plugin": "5.3.0",
-    "@typescript-eslint/parser": "5.3.0",
+    "@typescript-eslint/eslint-plugin": "5.46.1",
+    "@typescript-eslint/parser": "5.46.1",
     "babel-eslint": "10.1.0",
     "babel-jest": "27.3.1",
     "babel-loader": "8.2.3",
-    "eslint": "7.8.1",
-    "eslint-config-airbnb": "18.2.0",
-    "eslint-config-next": "12.0.3",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-html": "6.1.0",
-    "eslint-plugin-import": "2.25.3",
-    "eslint-plugin-jest": "26.1.4",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-prettier": "3.1.4",
-    "eslint-plugin-react": "7.20.6",
-    "eslint-plugin-react-hooks": "4.1.2",
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.0.7",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-module-utils": "2.7.4",
+    "eslint-plugin-eslint-plugin": "5.0.6",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "27.1.7",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.11",
+    "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-unused-imports": "2.0.0",
     "husky": ">=6",
     "identity-obj-proxy": "3.0.0",
@@ -73,10 +94,5 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,md}": [
-      "yarn prettier:fix",
-      "yarn lint"
-    ]
-  }
+  "packageManager": "yarn@3.3.1"
 }
