@@ -1,0 +1,8 @@
+.test {
+  max-width: $siteMaxWidth;
+  margin: 0 auto;
+  width: 100%;
+  @include breakpoint(xs) {
+    background-color: red;
+  }
+}
