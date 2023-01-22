@@ -1,6 +1,6 @@
 import { AxiosInstance } from 'axios';
 
-import { EApiVersion, EHttpMethod } from '@typings/enums/api';
+import { EHttpMethod } from '@typings/enums/api';
 
 export declare namespace Common {
   interface IHttpRequest<Body = any> {
@@ -9,12 +9,7 @@ export declare namespace Common {
     body?: Body;
     headers?: IHttpHeaders;
     client: AxiosInstance;
-    url: (options: IHttpRequestUrl) => string;
-    version?: EApiVersion;
-  }
-
-  interface IHttpRequestUrl {
-    version?: EApiVersion;
+    url: () => string;
   }
 
   interface IHttpHeaders {
