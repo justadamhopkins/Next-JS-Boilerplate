@@ -1,5 +1,5 @@
 export enum EApiVersion {
-  one = 'v1',
+  One = 'v1',
 }
 
 export enum EHttpMethod {

@@ -15,7 +15,6 @@ export declare namespace Common {
 
   interface IHttpRequestUrl {
     version?: EApiVersion;
-    url: (options: IHttpRequestUrl) => string;
   }
 
   interface IHttpHeaders {
