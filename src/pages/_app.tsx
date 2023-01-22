@@ -13,6 +13,8 @@ import {
   FIFTEEN_MINUTES_IN_MS,
   FIVE_MINUTES_IN_MS,
 } from '@common/constants/times';
+import http from '@common/http';
+import { getAllCharacters } from '@common/http/services/harryPotter/requests';
 import AppContainer from '@core/AppContainer';
 
 import '@styles/styles.scss';
@@ -51,9 +53,9 @@ const CoreApp = ({ Component, reactQueryProps, pageProps }: TCoreAppProps) => {
 CoreApp.getInitialProps = async ({ Component, ctx }) => {
   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery('posts', () => ({
-    foo: 'posts',
-  }));
+  await queryClient.prefetchQuery('characters', () =>
+    http.send(getAllCharacters()),
+  );
 
   return {
     pageProps: Component.getServerSideProps

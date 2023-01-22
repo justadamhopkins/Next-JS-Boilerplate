@@ -3,18 +3,18 @@ import { log } from '@common/utils/logger';
 import { Common } from '@typings/common';
 
 type THttpOptions = {
-  shouldThrow?: boolean;
-  removeHeaders?: boolean;
-  getCookieValue?: (key: string) => string | undefined;
+  shouldThrow: boolean;
+  removeHeaders: boolean;
+  getCookieValue: (key: string) => string | undefined;
 };
 
 async function send<T>(
   httpReq: Common.IHttpRequest<T>,
-  options: THttpOptions,
+  options?: THttpOptions,
 ): Promise<T>;
 async function send<T>(
   httpReq: Common.IHttpRequest<T>,
-  options: THttpOptions,
+  options?: THttpOptions,
 ): Promise<T | undefined> {
   const { shouldThrow = true, getCookieValue, removeHeaders = false } =
     options || {};
