@@ -1,8 +1,6 @@
-import qs from 'qs';
-
-import { cleanObject } from '@common/utils/primitives/objetcs';
+import { getHttpRequestData } from '@common/http/getHttpReqData';
+import { log } from '@common/utils/logger';
 import { Common } from '@typings/common';
-import { EApiVersion } from '@typings/enums/api';
 
 type THttpOptions = {
   shouldThrow?: boolean;
@@ -26,6 +24,7 @@ async function send<T>(
     getCookieValue,
   });
   try {
+    log.info('fetching data....', { url });
     const { data } = await client.request<T>({
       url,
       headers: removeHeaders ? undefined : headers,
@@ -37,10 +36,10 @@ async function send<T>(
     const errorMessage = `(http.send) - ${error.message} - ${type} - ${url}`;
 
     if (!shouldThrow) {
-      console.warn(errorMessage);
+      log.warn(errorMessage);
       return undefined;
     }
-    console.error(errorMessage);
+    log.error(errorMessage);
     throw error;
   }
 }
@@ -50,31 +49,3 @@ const http = {
 };
 
 export default http;
-
-const getHttpRequestData = <T>({
-  httpReq,
-}: {
-  httpReq: Common.IHttpRequest<T>;
-  getCookieValue?: (key: any) => string | undefined;
-}) => {
-  const { body, method, ...request } = httpReq;
-
-  // Clean object removes all falsy vals
-  const headers = cleanObject({
-    ...request.headers,
-  }) as Common.IHttpHeaders;
-
-  const version = request.version || EApiVersion.One;
-  const url = request.url({ version });
-  const [rootUrl, queryParams] = url.split('?') || [];
-
-  return {
-    client: request.client,
-    url: `${rootUrl}${qs.stringify(qs.parse(queryParams), {
-      addQueryPrefix: true,
-    })}`,
-    method,
-    headers,
-    body,
-  };
-};
