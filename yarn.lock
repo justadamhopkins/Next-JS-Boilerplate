@@ -12507,6 +12507,7 @@ __metadata:
     sass: 1.56.2
     ts-jest: 27.0.7
     tsconfig-paths-webpack-plugin: 3.5.1
+    tslog: ^4.7.1
     typescript: 4.8.4
   languageName: unknown
   linkType: soft
@@ -16058,6 +16059,13 @@ __metadata:
   version: 2.4.1
   resolution: "tslib@npm:2.4.1"
   checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
+  languageName: node
+  linkType: hard
+
+"tslog@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "tslog@npm:4.7.1"
+  checksum: 03050b49c27baf07e5de6d2d446298f6ac36fcb151db20eb2890c2769ba525224b404a3b18472d5a57c5dc704885215fb319afbd1245e246d4d242121b91de0d
   languageName: node
   linkType: hard
 
