@@ -3836,6 +3836,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:18.11.16":
+  version: 18.11.16
+  resolution: "@types/node@npm:18.11.16"
+  checksum: 23603ecc1cc5afdd2311671565e1bd1a8905e18ed7f05857089eebe524824a3347dd0c3de9c1c291839f7cf21bcf5633903cdf7905efa0fdc7464cc7606fc9fa
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^14.0.10 || ^16.0.0, @types/node@npm:^14.14.20 || ^16.0.0":
   version: 16.18.11
   resolution: "@types/node@npm:16.18.11"
@@ -12463,6 +12470,7 @@ __metadata:
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 13.4.0
     "@types/jest": 27.0.2
+    "@types/node": 18.11.16
     "@types/react": 18.0.27
     "@types/react-dom": 18.0.10
     "@types/styled-components": 5.1.26

@@ -1,8 +1,3 @@
-import {
-  FIFTEEN_MINUTES_IN_MS,
-  FIVE_MINUTES_IN_MS,
-} from '@common/constants/times';
-import AppContainer from '@core/AppContainer';
 import { AppProps } from 'next/app';
 import React, { useState } from 'react';
 import {
@@ -13,6 +8,12 @@ import {
   dehydrate,
 } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+
+import {
+  FIFTEEN_MINUTES_IN_MS,
+  FIVE_MINUTES_IN_MS,
+} from '@common/constants/times';
+import AppContainer from '@core/AppContainer';
 
 import '@styles/styles.scss';
 
