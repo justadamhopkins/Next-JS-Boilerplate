@@ -5242,7 +5242,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.2.3":
+"axios@npm:1.2.3":
   version: 1.2.3
   resolution: "axios@npm:1.2.3"
   dependencies:
@@ -6271,7 +6271,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.3.2":
+"classnames@npm:2.3.2":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
   checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
@@ -12476,11 +12476,11 @@ __metadata:
     "@types/styled-components": 5.1.26
     "@typescript-eslint/eslint-plugin": 5.46.1
     "@typescript-eslint/parser": 5.46.1
-    axios: ^1.2.3
+    axios: 1.2.3
     babel-eslint: 10.1.0
     babel-jest: 27.3.1
     babel-loader: 8.2.3
-    classnames: ^2.3.2
+    classnames: 2.3.2
     dotenv: 16.0.2
     eslint: 8.30.0
     eslint-config-next: 13.0.7
@@ -12507,7 +12507,7 @@ __metadata:
     sass: 1.56.2
     ts-jest: 27.0.7
     tsconfig-paths-webpack-plugin: 3.5.1
-    tslog: ^4.7.1
+    tslog: 4.7.1
     typescript: 4.8.4
   languageName: unknown
   linkType: soft
@@ -16062,7 +16062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslog@npm:^4.7.1":
+"tslog@npm:4.7.1":
   version: 4.7.1
   resolution: "tslog@npm:4.7.1"
   checksum: 03050b49c27baf07e5de6d2d446298f6ac36fcb151db20eb2890c2769ba525224b404a3b18472d5a57c5dc704885215fb319afbd1245e246d4d242121b91de0d

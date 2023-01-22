@@ -38,8 +38,8 @@
   },
   "dependencies": {
     "@beam-australia/react-env": "3.1.1",
-    "axios": "^1.2.3",
-    "classnames": "^2.3.2",
+    "axios": "1.2.3",
+    "classnames": "2.3.2",
     "dotenv": "16.0.2",
     "next": "13.0.7",
     "qs": "6.11.0",
