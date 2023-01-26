@@ -24,7 +24,6 @@ async function send<T>(
     getCookieValue,
   });
   try {
-    log.info('fetching data....', { url });
     const { data } = await client.request<T>({
       url,
       headers: removeHeaders ? undefined : headers,
