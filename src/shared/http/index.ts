@@ -4,8 +4,8 @@ import { Common } from '@typings/common';
 
 type THttpOptions = {
   shouldThrow: boolean;
-  removeHeaders: boolean;
-  getCookieValue: (key: string) => string | undefined;
+  removeHeaders?: boolean;
+  getCookieValue?: (key: string) => string | undefined;
 };
 
 async function send<T>(
