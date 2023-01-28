@@ -18,14 +18,54 @@ describe('http.send.name', () => {
     mockAxios.reset();
   });
 
-  it('should fetch data', () => {
-    http.send(mockReqObj);
+  describe('when making a req', () => {
+    it('should fetch data successfully', async () => {
+      const result = http.send(mockReqObj);
 
-    expect(mockAxios.request).toHaveBeenCalledWith({
-      url: mockurl,
-      data: undefined,
-      headers: {},
-      method: 'GET',
+      mockAxios.mockResponse({ data: 'server says hello!', status: 200 });
+
+      await expect(result).resolves.toEqual('server says hello!');
+
+      expect(mockAxios.request).toHaveBeenCalledWith({
+        url: mockurl,
+        data: undefined,
+        headers: {},
+        method: 'GET',
+      });
+    });
+    describe('when something goes wrong', () => {
+      describe('and should throw is true', () => {
+        it('should catch and rethrow the error', async () => {
+          const result = http.send(mockReqObj);
+
+          mockAxios.mockError(new Error('BORKED'));
+
+          await expect(result).rejects.toThrowError('BORKED');
+
+          expect(mockAxios.request).toHaveBeenCalledWith({
+            url: mockurl,
+            data: undefined,
+            headers: {},
+            method: 'GET',
+          });
+        });
+      });
+      describe('and should throw is false', () => {
+        it('should catch the error and fail gracefully', async () => {
+          const result = http.send(mockReqObj, { shouldThrow: false });
+
+          mockAxios.mockError(new Error('BORKED'));
+
+          await expect(result).resolves.toBeUndefined();
+
+          expect(mockAxios.request).toHaveBeenCalledWith({
+            url: mockurl,
+            data: undefined,
+            headers: {},
+            method: 'GET',
+          });
+        });
+      });
     });
   });
 });
