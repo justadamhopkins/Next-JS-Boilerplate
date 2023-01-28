@@ -47,7 +47,3 @@ next-env.d.ts
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
-
-
-# project specific
-public/__ENV.js

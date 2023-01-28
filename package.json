@@ -24,7 +24,7 @@
     ]
   },
   "scripts": {
-    "dev": "NODE_ENV=development react-env -p ./configs/env/.env.local -- next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "test": "jest",
@@ -37,7 +37,6 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@beam-australia/react-env": "3.1.1",
     "axios": "1.2.3",
     "classnames": "2.3.2",
     "dotenv": "16.0.2",

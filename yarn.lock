@@ -1617,20 +1617,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@beam-australia/react-env@npm:3.1.1":
-  version: 3.1.1
-  resolution: "@beam-australia/react-env@npm:3.1.1"
-  dependencies:
-    cross-spawn: ^6.0.5
-    dotenv: ^8.0.0
-    dotenv-expand: ^5.1.0
-    minimist: ^1.2.0
-  bin:
-    react-env: dist/cli.js
-  checksum: b4af51bf68bd74a54d8fc630ed9d4ef0ebd009df17a1879c1bfde8b0d05e9a3e35945524cb5f10894b6aa111d628868d367f5d25805feecaad289d518d708a4f
-  languageName: node
-  linkType: hard
-
 "@cnakazawa/watch@npm:^1.0.3":
   version: 1.0.4
   resolution: "@cnakazawa/watch@npm:1.0.4"
@@ -7053,7 +7039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^6.0.0, cross-spawn@npm:^6.0.5":
+"cross-spawn@npm:^6.0.0":
   version: 6.0.5
   resolution: "cross-spawn@npm:6.0.5"
   dependencies:
@@ -13196,7 +13182,6 @@ __metadata:
   resolution: "next_js_boilerplate@workspace:."
   dependencies:
     "@babel/core": 7.16.0
-    "@beam-australia/react-env": 3.1.1
     "@next/eslint-plugin-next": 12.0.3
     "@storybook/addon-actions": 6.5.12
     "@storybook/addon-essentials": 6.5.12
