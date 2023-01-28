@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const env = require('./configs');
 const aliases = require('./configs/webpack/aliases');
 const path = require('path');
 
