@@ -8,12 +8,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'src', 'styles')],
     additionalData: '@use "@sass/core" as *;',
   },
-  compiler: {
-    styledComponents: true,
-  },
-
   webpack(config) {
-    config.plugins.push(new webpack.EnvironmentPlugin({ ...env }));
     config.resolve.alias = Object.assign(config.resolve.alias, aliases);
 
     return config;
