@@ -25,7 +25,6 @@
     "noImplicitThis": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
@@ -60,18 +59,26 @@
         "src/utils/tests"
       ]
     },
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "next.config.js",
     "postcss.config.js",
     ".next",
-    "src/**/__mocks__/*"
+    "src/**/__mocks__/*",
+    "prettier.config.js"
   ]
 }
