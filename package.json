@@ -2,27 +2,6 @@
   "name": "next_js_boilerplate",
   "version": "0.1.0",
   "private": true,
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --cache --fix"
-    ],
-    "src/**/*.{css,scss,json}": [
-      "prettier --write"
-    ]
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -30,6 +9,7 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
     "prettier:fix": "prettier --write \"**/*.{ts,js,tsx}\"",
     "prettier:check": "prettier --check .",
     "prepare": "husky install",
@@ -40,7 +20,7 @@
     "axios": "1.2.3",
     "classnames": "2.3.2",
     "dotenv": "16.0.2",
-    "next": "13.0.7",
+    "next": "13.4.10",
     "qs": "6.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -60,6 +40,7 @@
     "@testing-library/dom": "8.19.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
+    "@total-typescript/ts-reset": "^0.4.2",
     "@types/jest": "27.0.2",
     "@types/node": "18.11.16",
     "@types/react": "18.0.27",
@@ -90,7 +71,16 @@
     "sass": "1.56.2",
     "ts-jest": "27.0.7",
     "tsconfig-paths-webpack-plugin": "3.5.1",
-    "typescript": "4.8.4"
+    "typescript": "5.1.6"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "src/**/*.{css,scss,json}": [
+      "prettier --write"
+    ]
   },
   "resolutions": {
     "@types/react": "18.0.27",
