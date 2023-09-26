@@ -1,5 +1,5 @@
 @use '../core/vars' as *;
-@use '../mixins/breakpoints' as *;
+
 
 @mixin font-regular {
   font-weight: normal;
@@ -61,7 +61,4 @@
   letter-spacing: 1px;
   margin: 0;
 
-  @include breakpoint('md') {
-    font-size: 2rem;
-  }
 }
