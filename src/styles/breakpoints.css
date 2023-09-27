@@ -1,5 +1,0 @@
-@value xs-small: (min-width: 360px);
-@value small: (min-width: 520px);
-@value medium: (min-width: 768px);
-@value large: (min-width: 1200px);
-@value extra-large: (min-width: 1536px);
