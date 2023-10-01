@@ -21,46 +21,46 @@ h6 {
 }
 
 h1 {
-    font-size: 3.052rem;
+    font-size: var(--heading1);
     font-family: var(--font-nunito-sans);
     font-weight: 700;
     font-style: normal;
 }
 
 h2 {
-    font-size: 2.441rem;
+    font-size: var(--heading2);
     font-family: var(--font-nunito-sans);
     font-weight: 700;
     font-style: normal;
 }
 
 h3 {
-    font-size: 1.953rem;
+    font-size: var(--heading3);
     font-family: var(--font-nunito-sans);
     font-weight: 600;
     font-style: normal;
 }
 
 h4 {
-    font-size: 1.563rem;
+    font-size: var(--heading4);
     font-family: var(--font-nunito-sans);
     font-weight: 600;
     font-style: normal;
 }
 
 h5 {
-    font-size: 1.25rem;
+    font-size: var(--smallHeading);
     font-family: var(--font-nunito-sans);
     font-weight: 600;
     font-style: normal;
 }
 
 p {
-    font-size: 1rem;
+    font-size: var(--baseFontSize);
     line-height: 1.25;
     font-family: var(--font-nunito-sans);
     font-weight: 400;
     font-style: normal;
 }
 
-small, .text_small {font-size: 0.8rem;}
+small {font-size: var(--extraSmallFont);}
