@@ -2,6 +2,6 @@
   "plugins": [
     "autoprefixer",
     "postcss-modules-values",
-    "postcss-nesting"
+    "postcss-nested"
   ]
 }
