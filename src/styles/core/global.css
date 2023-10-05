@@ -10,7 +10,8 @@ body {
     font-family: var(--font-nunito-sans), sans-serif;
     font-weight: 400;
     line-height: 1.75;
-    color: #000000;
+    color: #ffffff;
+    background-color: var(--light-teal);
 }
 
 
