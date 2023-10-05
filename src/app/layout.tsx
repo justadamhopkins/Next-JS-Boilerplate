@@ -4,6 +4,7 @@ import { FC, PropsWithChildren } from 'react';
 import '@styles/core/variables.css';
 import '@styles/core/global.css';
 import '@styles/core/reset.css';
+import AppContainer from '@core/AppContainer';
 import { FONT_NUNITO_SANS } from '@styles/core/fonts';
 
 import Providers from './providers';
@@ -20,7 +21,7 @@ const RootLayout: FC<PropsWithChildren<TRootLayoutProps>> = ({ children }) => {
     >
       <body>
         <Providers>
-          <main>{children}</main>
+          <AppContainer>{children}</AppContainer>
         </Providers>
       </body>
     </html>

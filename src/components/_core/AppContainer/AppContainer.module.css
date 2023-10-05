@@ -4,7 +4,9 @@
   max-width: var(--siteMaxWidth);
   margin: 0 auto;
   width: 100%;
-  background-color: var( --dark-teal);
+
   @media bp-medium {
-  }
+      background-color: var(--light-teal);
+    }
+
 }
