@@ -1,0 +1,10 @@
+@value bp-medium from "@styles/core/breakpoints.css";
+
+.test {
+  max-width: var(--siteMaxWidth);
+  margin: 0 auto;
+  width: 100%;
+  background-color: var( --dark-teal);
+  @media bp-medium {
+  }
+}
