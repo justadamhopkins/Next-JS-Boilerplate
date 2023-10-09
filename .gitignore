@@ -9,7 +9,7 @@
 .pnp.js
 *.env
 # testing
-/coverage
+/testCoverage
 
 # next.js
 /.next/
