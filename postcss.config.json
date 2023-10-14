@@ -1,7 +1,6 @@
 {
   "plugins": [
     "autoprefixer",
-    "postcss-modules-values",
     "postcss-nested"
   ]
 }
