@@ -1,26 +1,47 @@
+import { defineConfig } from 'vitest/config';
 import path from 'path';
 
-import { defineConfig } from 'vitest/config';
-
 const testConfig = defineConfig({
+  resolve: {
+    alias: [
+      { find: '@atoms', replacement: path.resolve(__dirname, './src/_atoms') },
+      {
+        find: '@molecules',
+        replacement: path.resolve(__dirname, './src/_molecules'),
+      },
+      {
+        find: '@organisms',
+        replacement: path.resolve(__dirname, './src/_organisms'),
+      },
+      { find: '@core', replacement: path.resolve(__dirname, './src/_core') },
+      {
+        find: '@templates',
+        replacement: path.resolve(__dirname, './src/_templates'),
+      },
+      { find: '@hooks', replacement: path.resolve(__dirname, './src/_hooks') },
+      {
+        find: '@styles',
+        replacement: path.resolve(__dirname, './src/_styles'),
+      },
+      { find: '@core', replacement: path.resolve(__dirname, './src/_core') },
+      {
+        find: '@helpers',
+        replacement: path.resolve(__dirname, './src/helpers'),
+      },
+      {
+        find: '@constants',
+        replacement: path.resolve(__dirname, './src/constants'),
+      },
+      { find: '@utils', replacement: path.resolve(__dirname, './src/utils') },
+      { find: '@typings', replacement: path.resolve(__dirname, './src/types') },
+    ],
+  },
   test: {
     globals: true,
     clearMocks: true,
     include: ['**/*.test.{ts,tsx}'],
     environment: 'jsdom',
     setupFiles: ['./configs/vitest/setupTests.ts'],
-    alias: {
-      '@atoms/*': path.resolve(__dirname, 'src/components/_atoms'),
-      '@molecules/*': path.resolve(__dirname, 'src/components/_molecules/*'),
-      '@organisms/*': path.resolve(__dirname, 'src/components/_organisms'),
-      '@core/*': path.resolve(__dirname, 'src/components/_core'),
-      '@templates/*': path.resolve(__dirname, 'src/components/_templates'),
-      '@hooks/*': path.resolve(__dirname, 'src/components/_hooks'),
-      '@styles/*': path.resolve(__dirname, 'src/styles'),
-      '@common/*': path.resolve(__dirname, 'src/shared'),
-      '@typings/*': path.resolve(__dirname, 'src/types'),
-      'test-utils/*': path.resolve(__dirname, 'src/utils/tests'),
-    },
     coverage: {
       provider: 'istanbul',
       enabled: true,

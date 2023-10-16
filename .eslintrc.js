@@ -37,6 +37,7 @@ module.exports = {
     'yarn.lock',
     '*.config.js',
     '*.config.json',
+    '*.config.ts',
     'reports/*',
   ],
   rules: {
@@ -151,13 +152,13 @@ module.exports = {
           },
           {
             pattern: '**/*.+(scss)',
-            patternOptions: {dot: true, nocomment: true},
+            patternOptions: { dot: true, nocomment: true },
             group: 'index',
             position: 'after',
           },
           {
             pattern: '{.,..}/**/*.+(scss)',
-            patternOptions: {dot: true, nocomment: true},
+            patternOptions: { dot: true, nocomment: true },
             group: 'index',
             position: 'after',
           },
@@ -228,6 +229,6 @@ module.exports = {
     'react/jsx-boolean-value': ['error', 'always'],
     'react/prop-types': [0],
     'global-require': [0],
-    'react/jsx-filename-extension': [1, {extensions: ['.tsx', '.jsx']}],
+    'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.jsx'] }],
   },
 };

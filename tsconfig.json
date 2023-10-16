@@ -8,6 +8,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["vitest/globals"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -49,15 +50,18 @@
       "@styles/*": [
         "src/styles/*"
       ],
-      "@common/*": [
-        "src/shared/*"
+      "@helpers/*": [
+        "src/helpers/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
       ],
       "@typings/*": [
         "src/types/*"
       ],
-      "test-utils": [
-        "src/utils/tests"
-      ]
     },
     "incremental": true,
     "plugins": [
