@@ -1,7 +1,8 @@
 import qs from 'qs';
 
-import { cleanObject } from '@common/utils/primitives/objetcs';
 import { Common } from '@typings/common';
+
+import { cleanObject } from '../../utils/primitives/objetcs';
 
 export const getHttpRequestData = <T>({
   httpReq,

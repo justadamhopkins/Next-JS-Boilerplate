@@ -1,7 +1,7 @@
+import { TWENTY_SECONDS_IN_MS } from '@constants/times';
 import { AxiosInstance } from 'axios';
 
-import { TWENTY_SECONDS_IN_MS } from '@common/constants/times';
-import { createBaseClient } from '@common/http/createBaseClient';
+import { createBaseClient } from '@helpers/http/createBaseClient';
 
 export const createHarryPotterClient = (): AxiosInstance =>
   createBaseClient({

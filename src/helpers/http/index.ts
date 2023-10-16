@@ -1,6 +1,8 @@
-import { getHttpRequestData } from '@common/http/getHttpReqData';
-import { log } from '@common/utils/logger';
 import { Common } from '@typings/common';
+
+import { log } from '../../utils/logger';
+
+import { getHttpRequestData } from './getHttpReqData';
 
 type THttpOptions = {
   shouldThrow: boolean;
@@ -16,8 +18,11 @@ async function send<T>(
   httpReq: Common.IHttpRequest<T>,
   options?: THttpOptions,
 ): Promise<T | undefined> {
-  const { shouldThrow = true, getCookieValue, removeHeaders = false } =
-    options || {};
+  const {
+    shouldThrow = true,
+    getCookieValue,
+    removeHeaders = false,
+  } = options || {};
   const type = httpReq.type;
   const { body, url, client, headers } = getHttpRequestData({
     httpReq,
