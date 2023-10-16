@@ -31,7 +31,6 @@ module.exports = {
     '__mocks__/**/*',
     'src/**/__mocks__/*',
     'src/**/*.stories.*',
-    'jest.config.js',
     'package.json',
     'package-lock.json',
     'yarn.lock',
