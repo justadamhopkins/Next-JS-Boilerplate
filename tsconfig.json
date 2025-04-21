@@ -8,7 +8,9 @@
       "dom.iterable",
       "esnext"
     ],
-    "types": ["vitest/globals"],
+    "types": [
+      "vitest/globals"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -61,7 +63,7 @@
       ],
       "@typings/*": [
         "src/types/*"
-      ],
+      ]
     },
     "incremental": true,
     "plugins": [

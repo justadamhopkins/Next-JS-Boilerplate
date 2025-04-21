@@ -1,13 +1,18 @@
-import clsx from 'clsx';
-import React, { FC, ReactNode } from 'react';
-
-import styles from './AppContainer.module.css';
+import { FC, ReactNode } from 'react';
 
 interface IAppContainerProps {
   children: ReactNode;
 }
+
 const AppContainer: FC<IAppContainerProps> = ({ children }) => {
-  return <main className={clsx(styles.test)}>{children}</main>;
+  return (
+    <main>
+      <h1 className="text-3xl font-bold text-red-700 underline">
+        Hello world!
+      </h1>
+      {children}
+    </main>
+  );
 };
 
 export default AppContainer;
