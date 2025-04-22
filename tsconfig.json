@@ -41,7 +41,7 @@
         "src/components/_organisms/*"
       ],
       "@core/*": [
-        "src/components/_core/*"
+        "src/components/_shared/*"
       ],
       "@templates/*": [
         "src/components/_templates/*"
