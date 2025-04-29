@@ -13,8 +13,8 @@ const Providers = ({ children }: { children: ReactNode }) => {
         defaultOptions: {
           queries: {
             refetchOnWindowFocus: false,
-            keepPreviousData: true,
-            cacheTime: FIFTEEN_MINUTES_IN_MS,
+            placeholderData: (prev: any) => prev,
+            gcTime: FIFTEEN_MINUTES_IN_MS,
             staleTime: FIVE_MINUTES_IN_MS,
           },
         },
