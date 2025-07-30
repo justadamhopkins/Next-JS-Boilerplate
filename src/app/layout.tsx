@@ -1,12 +1,14 @@
 import { FC, PropsWithChildren } from 'react';
 
 import AppContainer from '@core/AppContainer';
-import '@styles/global.css';
+import '@styles/index.css';
 
 import Providers from './providers';
 
 type TRootLayoutProps = {};
+
 const RootLayout: FC<PropsWithChildren<TRootLayoutProps>> = ({ children }) => {
+  console.log('ddhn');
   return (
     <html lang="en">
       <body>

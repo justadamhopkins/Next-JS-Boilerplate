@@ -73,25 +73,6 @@ export default [
           },
         },
       ],
-      'check-file/filename-naming-convention': [
-        'error',
-        {
-          'src/**/!(*.test|*.d|*.stories|*.config).*': 'KEBAB_CASE',
-        },
-      ],
-      'check-file/folder-naming-convention': [
-        'error',
-        {
-          'src/app/**/': 'NEXT_JS_APP_ROUTER_CASE', // Handle Next JS app dir folder naming syntax
-          'src/!(app|components|routes|plugins)/**/': 'KEBAB_CASE', // Match everything deeply inside src expect for components, routes and plugins directory
-          'components/!(_atoms|_molecules|_organisms|_templates)/**/':
-            'KEBAB_CASE', //Matches everything inside components folder except for the folder names _atoms, _molecules, and _organisms
-          'components/_atoms/**/': 'KEBAB_CASE', // includes all contents in any dir inside this folder
-          'components/_molecules/**/': 'KEBAB_CASE', // includes all contents in any dir inside this folder
-          'components/_organisms/**/': 'KEBAB_CASE', // includes all contents in any dir inside this folder
-          'components/_templates/**/': 'KEBAB_CASE', // includes all contents in any dir inside this folder
-        },
-      ],
       eqeqeq: ['error', 'always', { null: 'ignore' }],
       'no-console': [
         'error',
@@ -151,7 +132,6 @@ export default [
         },
       ],
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
-      'replace-js-with-ts/replace-js-with-ts': 'error',
     },
   },
   {
