@@ -8,7 +8,6 @@ import Providers from './providers';
 type TRootLayoutProps = {};
 
 const RootLayout: FC<PropsWithChildren<TRootLayoutProps>> = ({ children }) => {
-  console.log('ddhn');
   return (
     <html lang="en">
       <body>
