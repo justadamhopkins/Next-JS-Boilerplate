@@ -10,5 +10,5 @@ export const TEN_MINUTES_IN_MS = 600000;
 export const FIFTEEN_MINUTES_IN_MS = 900000;
 export const FIVE_MINUTES_IN_S = 300;
 export const TEN_MINUTES_IN_S = 600;
-export const FIFTEEN_MINUTES_IN_S = 900;
 export const THIRTY_MINUTES_IN_S = 1800;
+export const FIFTEEN_MINUTES_IN_S = 900;
