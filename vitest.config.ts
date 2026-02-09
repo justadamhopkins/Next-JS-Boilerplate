@@ -46,10 +46,6 @@ const testConfig = defineConfig({
       { find: '@typings', replacement: path.resolve(__dirname, './src/types') },
       { find: '@libs', replacement: path.resolve(__dirname, './src/libs') },
       { find: '@tests', replacement: path.resolve(__dirname, './src/tests') },
-      {
-        find: '@services',
-        replacement: path.resolve(__dirname, './src/services'),
-      },
     ],
   },
   test: {
