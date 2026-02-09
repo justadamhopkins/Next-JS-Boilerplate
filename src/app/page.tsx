@@ -1,8 +1,4 @@
-import React from 'react';
-
 const HomePage = () => {
-  console.log('HomePage rendered');
-  
   return (
     <>
       <h1 className="text-red">new app</h1>
