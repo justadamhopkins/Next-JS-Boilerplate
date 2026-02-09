@@ -1,3 +1,4 @@
+import storybook from 'eslint-plugin-storybook';
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -5,13 +6,12 @@ import typescriptParser from '@typescript-eslint/parser';
 import globals from 'globals';
 import unusedImports from 'eslint-plugin-unused-imports';
 import vitest from 'eslint-plugin-vitest';
-import stylisticJs from '@stylistic/eslint-plugin-js';
+import stylistic from '@stylistic/eslint-plugin';
 import importPlugin from 'eslint-plugin-import';
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import pluginQuery from '@tanstack/eslint-plugin-query';
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
 
 export default [
@@ -19,11 +19,12 @@ export default [
   ...tseslint.configs.recommended,
   eslintConfigPrettier,
   ...pluginQuery.configs['flat/recommended'],
+  ...storybook.configs['flat/recommended'],
   {
     name: 'ignoreList',
     ignores: [
-      'dist/**',
-      'node_modules/**',
+      'dist',
+      '**/node_modules/*',
       'build/**',
       '.*.js',
       '.lintstagedrc.mjs',
@@ -34,10 +35,11 @@ export default [
       'tsconfig.json',
       'tsconfig.prod.json',
       'tsconfig.test.json',
-      'coverage/*',
+      '*.stories.tsx',
+      'coverage',
       'postcss.config.js',
-      '.next',
-      'svgo.config.js',
+      '**/.next/*',
+      'next-env.d.ts',
     ],
   },
   {
@@ -45,7 +47,7 @@ export default [
     files: ['**/*.js?(x)', '**/*.ts?(x)'],
     plugins: {
       unusedImports,
-      stylisticJs,
+      '@stylistic': stylistic,
       import: importPlugin,
     },
     languageOptions: {
@@ -86,11 +88,11 @@ export default [
         { argsIgnorePattern: '^_', ignoreRestSiblings: true },
       ],
       radix: 'error',
-      'stylisticJs/semi': 'error',
+      '@stylistic/semi': 'error',
       'default-case': 'error',
-      'stylisticJs/no-trailing-spaces': 'error',
+      '@stylistic/no-trailing-spaces': 'error',
       'no-bitwise': 'error',
-      'stylisticJs/no-multiple-empty-lines': 'error',
+      '@stylistic/no-multiple-empty-lines': 'error',
       curly: 'error',
       'no-debugger': 'error',
       'no-empty': 'error',
@@ -137,7 +139,7 @@ export default [
   {
     name: 'frontendConfig',
     files: ['**/*.{jsx,tsx,ts,js}'],
-    ignores: ['!.storybook', '.sanity/'],
+    ignores: ['!.storybook'],
     settings: {
       react: {
         version: 'detect',
@@ -145,7 +147,7 @@ export default [
     },
     plugins: {
       react: eslintPluginReact,
-      'react-hooks': fixupPluginRules(eslintPluginReactHooks),
+      'react-hooks': eslintPluginReactHooks,
       'jsx-a11y': eslintPluginJsxA11y,
       'testing-library': eslintPluginTestingLibrary,
     },
@@ -167,8 +169,12 @@ export default [
       'react/function-component-definition': [
         'error',
         {
-          namedComponents: ['arrow-function', 'function-expression'],
-          unnamedComponents: 'arrow-function',
+          namedComponents: [
+            'arrow-function',
+            'function-expression',
+            'function-declaration',
+          ],
+          unnamedComponents: ['arrow-function'],
         },
       ],
       'testing-library/consistent-data-testid': [

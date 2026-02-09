@@ -1,29 +1,39 @@
-import { defineConfig } from 'vitest/config';
 import path from 'path';
+
+import { defineConfig } from 'vitest/config';
 
 const testConfig = defineConfig({
   resolve: {
     alias: [
-      { find: '@atoms', replacement: path.resolve(__dirname, './src/_atoms') },
+      {
+        find: '@atoms',
+        replacement: path.resolve(__dirname, './src/components/_atoms'),
+      },
       {
         find: '@molecules',
-        replacement: path.resolve(__dirname, './src/_molecules'),
+        replacement: path.resolve(__dirname, './src/components/_molecules'),
       },
       {
         find: '@organisms',
-        replacement: path.resolve(__dirname, './src/_organisms'),
+        replacement: path.resolve(__dirname, './src/components/_organisms'),
       },
-      { find: '@core', replacement: path.resolve(__dirname, './src/_core') },
       {
         find: '@templates',
-        replacement: path.resolve(__dirname, './src/_templates'),
+        replacement: path.resolve(__dirname, './src/components/_templates'),
       },
-      { find: '@hooks', replacement: path.resolve(__dirname, './src/_hooks') },
+      {
+        find: '@utilities',
+        replacement: path.resolve(__dirname, './src/components/utilities'),
+      },
+      { find: '@hooks', replacement: path.resolve(__dirname, './src/hooks') },
       {
         find: '@styles',
-        replacement: path.resolve(__dirname, './src/_styles'),
+        replacement: path.resolve(__dirname, './src/styles'),
       },
-      { find: '@core', replacement: path.resolve(__dirname, './src/_core') },
+      {
+        find: '@core',
+        replacement: path.resolve(__dirname, './src/components/core'),
+      },
       {
         find: '@helpers',
         replacement: path.resolve(__dirname, './src/helpers'),
@@ -34,17 +44,27 @@ const testConfig = defineConfig({
       },
       { find: '@utils', replacement: path.resolve(__dirname, './src/utils') },
       { find: '@typings', replacement: path.resolve(__dirname, './src/types') },
+      { find: '@libs', replacement: path.resolve(__dirname, './src/libs') },
+      { find: '@tests', replacement: path.resolve(__dirname, './src/tests') },
+      {
+        find: '@services',
+        replacement: path.resolve(__dirname, './src/services'),
+      },
     ],
   },
   test: {
+    env: {
+      NEXT_PUBLIC_API_MOCKING: 'false',
+      NEXT_PUBLIC_PADDLE_BASE_URL: 'https://mockapi.paddle.com',
+    },
     globals: true,
     clearMocks: true,
     include: ['**/*.test.{ts,tsx}'],
     environment: 'jsdom',
-    setupFiles: ['./configs/vitest/setupTests.ts'],
+    setupFiles: ['./src/tests/configs/setupTests.ts'],
     coverage: {
       provider: 'istanbul',
-      enabled: true,
+      enabled: false,
       reportsDirectory: 'testCoverage',
       reporter: ['json', 'text', 'lcov', 'clover'],
       include: [
