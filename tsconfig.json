@@ -28,14 +28,17 @@
       "@atoms/*": ["src/components/_atoms/*"],
       "@molecules/*": ["src/components/_molecules/*"],
       "@organisms/*": ["src/components/_organisms/*"],
-      "@core/*": ["src/components/_shared/*"],
+      "@core/*": ["src/components/core/*"],
       "@templates/*": ["src/components/_templates/*"],
+      "@utilities/*": ["src/components/utilities/*"],
       "@hooks/*": ["src/hooks/*"],
       "@styles/*": ["src/styles/*"],
       "@helpers/*": ["src/helpers/*"],
       "@constants/*": ["src/constants/*"],
       "@utils/*": ["src/utils/*"],
-      "@typings/*": ["src/types/*"]
+      "@typings/*": ["src/types/*"],
+      "@libs/*": ["src/libs/*"],
+      "@tests/*": ["src/tests/*"]
     },
     "incremental": true,
     "plugins": [
