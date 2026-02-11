@@ -29,15 +29,9 @@
     "sb:build": "storybook build"
   },
   "dependencies": {
-    "@headlessui/react": "2.2.9",
-    "@radix-ui/react-accordion": "1.2.12",
-    "@radix-ui/react-dialog": "1.1.15",
     "@tailwindcss/postcss": "4.1.18",
     "@tanstack/react-query": "5.90.19",
     "@tanstack/react-query-devtools": "5.91.2",
-    "css-variants": "2.3.4",
-    "lodash.debounce": "4.0.8",
-    "motion": "12.28.1",
     "next": "16.1.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",
