@@ -1,19 +1,87 @@
-This is a [Next.js](https://nextjs.org/) boilerplate built by Adam Hopkins. It contains Typescript, Styled Components, React testing library.
+# 🚀 Next.js Boilerplate
 
-## Getting Started
+A modern, production-ready Next.js boilerplate with TypeScript, Tailwind CSS, and comprehensive testing setup.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
+- ⚡️ **Next.js 16** - Latest React framework with App Router
+- 🎨 **Tailwind CSS 4** - Utility-first CSS framework
+- 📘 **TypeScript** - Type safety and better DX
+- 🧪 **Vitest** - Fast unit testing with React Testing Library
+- 📖 **Storybook** - Component development and documentation
+- 🔍 **ESLint & Prettier** - Code quality and formatting
+- 🎭 **Framer Motion** - Smooth animations
+- 🔄 **TanStack Query** - Powerful data fetching and caching
+- 🎯 **Radix UI** - Accessible component primitives
+- 🪝 **Husky** - Git hooks for code quality
+
+## 🏗️ Project Structure
+
+```
+src/
+├── app/              # Next.js app router pages
+├── components/       # React components (Atomic Design)
+│   ├── _atoms/
+│   ├── _molecules/
+│   ├── _organisms/
+│   └── _templates/
+├── hooks/            # Custom React hooks
+├── libs/             # Third-party library configurations
+├── store/            # State management
+├── styles/           # Global styles and fonts
+└── utils/            # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Prerequisites
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Node.js 18+
+- pnpm (recommended)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Installation
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run development server
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 📜 Available Scripts
+
+```bash
+pnpm dev          # Start development server
+pnpm build        # Build for production
+pnpm start        # Start production server
+pnpm test         # Run tests with Vitest
+pnpm lint         # Lint code
+pnpm lint:fix     # Fix linting issues
+pnpm typecheck    # Type check with TypeScript
+pnpm sb:dev       # Run Storybook
+pnpm sb:build     # Build Storybook
+```
+
+## 🧪 Testing
+
+This boilerplate includes a comprehensive testing setup with Vitest and React Testing Library.
+
+```bash
+pnpm test         # Run tests
+```
+
+## 🛠️ Tech Stack
+
+| Technology     | Purpose               |
+| -------------- | --------------------- |
+| Next.js        | React framework       |
+| TypeScript     | Type safety           |
+| Tailwind CSS   | Styling               |
+| TanStack Query | Data fetching         |
+| Vitest         | Testing               |
+| Storybook      | Component docs        |
+| Framer Motion  | Animations            |
+| Radix UI       | Accessible components |
