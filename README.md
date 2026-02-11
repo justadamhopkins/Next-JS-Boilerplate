@@ -10,9 +10,7 @@ A modern, production-ready Next.js boilerplate with TypeScript, Tailwind CSS, an
 - 🧪 **Vitest** - Fast unit testing with React Testing Library
 - 📖 **Storybook** - Component development and documentation
 - 🔍 **ESLint & Prettier** - Code quality and formatting
-- 🎭 **Framer Motion** - Smooth animations
 - 🔄 **TanStack Query** - Powerful data fetching and caching
-- 🎯 **Radix UI** - Accessible component primitives
 - 🪝 **Husky** - Git hooks for code quality
 
 ## 🏗️ Project Structure
