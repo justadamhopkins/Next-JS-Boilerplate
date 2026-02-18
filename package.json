@@ -3,18 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "test:vitest": "vitest",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "typecheck": "tsc --noEmit",
-    "prettier:fix": "prettier --write \"**/*.{ts,js,tsx}\"",
-    "prettier:check": "prettier --check .",
-    "prepare": "husky install"
-  },
-  "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
