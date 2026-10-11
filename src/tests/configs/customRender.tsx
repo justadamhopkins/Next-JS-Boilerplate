@@ -1,5 +1,3 @@
-import { getQueryClient } from '@libs/cssVariants/client';
-import { QueryClientProvider } from '@tanstack/react-query';
 import {
   render,
   renderHook,
@@ -11,41 +9,21 @@ import userEvent from '@testing-library/user-event';
 import {
   act,
   type ComponentType,
-  type PropsWithChildren,
   type ReactElement,
   type ReactNode,
   Suspense,
 } from 'react';
 
-const WrapperComponent = ({ children }: PropsWithChildren) => {
-  const queryClient = getQueryClient();
-  return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-  );
-};
-
 const customRender = (
   ui: ReactElement,
   options: RenderOptions = {},
-): RenderResult =>
-  render(ui, {
-    wrapper: ({ children }) => <WrapperComponent>{children}</WrapperComponent>,
-    ...options,
-  });
+): RenderResult => render(ui, options);
 
 function customRenderHook<TProps, TResult>(
   callback: (props: TProps) => TResult,
   options?: RenderHookOptions<TProps>,
 ) {
-  return renderHook(callback, {
-    wrapper: props => (
-      <WrapperComponent {...options?.initialProps}>
-        {(props as { children: ReactNode }).children}
-      </WrapperComponent>
-    ),
-
-    ...options,
-  });
+  return renderHook(callback, options);
 }
 
 export function componentRenderer<Props>(
