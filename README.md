@@ -51,7 +51,7 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
+The dev server runs through [portless](https://github.com/vercel-labs/portless), so open [https://boilerplate.localhost](https://boilerplate.localhost) to view the app. To skip portless, run `pnpm next dev` and open [http://localhost:3000](http://localhost:3000).
 
 ## 📜 Available Scripts
 
