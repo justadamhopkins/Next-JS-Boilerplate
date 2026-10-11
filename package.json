@@ -44,7 +44,6 @@
     "@storybook/nextjs-vite": "10.6.0",
     "@stylistic/eslint-plugin": "5.10.0",
     "@svgr/webpack": "8.1.0",
-    "@tanstack/eslint-plugin-query": "5.103.1",
     "@testing-library/dom": "10.4.2",
     "@testing-library/jest-dom": "7.0.1",
     "@testing-library/react": "16.3.3",

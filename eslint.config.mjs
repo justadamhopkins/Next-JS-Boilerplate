@@ -11,14 +11,12 @@ import importPlugin from 'eslint-plugin-import';
 import eslintPluginReact from 'eslint-plugin-react';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
-import pluginQuery from '@tanstack/eslint-plugin-query';
 import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
 
 export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   eslintConfigPrettier,
-  ...pluginQuery.configs['flat/recommended'],
   ...storybook.configs['flat/recommended'],
   {
     name: 'ignoreList',

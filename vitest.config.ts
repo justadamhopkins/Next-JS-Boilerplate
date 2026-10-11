@@ -43,6 +43,10 @@ const testConfig = defineConfig({
         replacement: path.resolve(__dirname, './src/constants'),
       },
       { find: '@utils', replacement: path.resolve(__dirname, './src/utils') },
+      {
+        find: '@services',
+        replacement: path.resolve(__dirname, './src/services'),
+      },
       { find: '@typings', replacement: path.resolve(__dirname, './src/types') },
       { find: '@libs', replacement: path.resolve(__dirname, './src/libs') },
       { find: '@tests', replacement: path.resolve(__dirname, './src/tests') },
@@ -82,8 +86,9 @@ const testConfig = defineConfig({
         '!src/**/__mocks__/*',
         '!src/**/__mocks__/**/*',
         '!scripts/**/*',
+        '!src/tests/**/*',
       ],
-      exclude: ['/node_modules/', './configs/vitest/setupTests.ts'],
+      exclude: ['/node_modules/'],
     },
   },
 });

@@ -10,7 +10,9 @@ A modern, production-ready Next.js boilerplate with TypeScript, Tailwind CSS, an
 - 🧪 **Vitest** - Fast unit testing with React Testing Library
 - 📖 **Storybook** - Component development and documentation
 - 🔍 **ESLint & Prettier** - Code quality and formatting
-- 🔄 **TanStack Query** - Powerful data fetching and caching
+- 🧩 **Base UI** - Unstyled, accessible React components
+- 📝 **React Hook Form + Zod** - Forms with schema validation
+- 🔐 **Varlock** - Typed, validated environment variables
 - 🪝 **Husky** - Git hooks for code quality
 
 ## 🏗️ Project Structure
@@ -25,8 +27,10 @@ src/
 │   └── _templates/
 ├── hooks/            # Custom React hooks
 ├── libs/             # Third-party library configurations
+├── services/         # API clients and data access
 ├── store/            # State management
 ├── styles/           # Global styles and fonts
+├── tests/            # Test setup and render helpers
 └── utils/            # Utility functions
 ```
 
@@ -34,7 +38,7 @@ src/
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 24 (see `.nvmrc`)
 - pnpm (recommended)
 
 ### Installation
@@ -73,13 +77,14 @@ pnpm test         # Run tests
 
 ## 🛠️ Tech Stack
 
-| Technology     | Purpose               |
-| -------------- | --------------------- |
-| Next.js        | React framework       |
-| TypeScript     | Type safety           |
-| Tailwind CSS   | Styling               |
-| TanStack Query | Data fetching         |
-| Vitest         | Testing               |
-| Storybook      | Component docs        |
-| Framer Motion  | Animations            |
-| Radix UI       | Accessible components |
+| Technology      | Purpose               |
+| --------------- | --------------------- |
+| Next.js         | React framework       |
+| TypeScript      | Type safety           |
+| Tailwind CSS    | Styling               |
+| Base UI         | Accessible components |
+| React Hook Form | Forms                 |
+| Zod             | Schema validation     |
+| Varlock         | Environment variables |
+| Vitest          | Testing               |
+| Storybook       | Component docs        |
