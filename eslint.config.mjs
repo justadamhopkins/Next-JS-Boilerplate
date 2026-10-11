@@ -40,6 +40,7 @@ export default [
       'postcss.config.js',
       '**/.next/*',
       'next-env.d.ts',
+      'env.d.ts',
     ],
   },
   {

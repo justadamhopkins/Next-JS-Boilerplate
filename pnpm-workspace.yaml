@@ -1,3 +1,6 @@
 allowBuilds:
   esbuild: false
   msw: false
+
+overrides:
+  '@next/env': 'npm:@varlock/nextjs-integration@1.2.4'

@@ -21,6 +21,7 @@
   "dependencies": {
     "@base-ui/react": "1.8.0",
     "@tailwindcss/postcss": "4.3.3",
+    "@varlock/nextjs-integration": "^1.2.4",
     "css-variants": "2.3.5",
     "next": "16.4.0",
     "react": "19.3.0",
@@ -30,6 +31,7 @@
     "tailwind-merge": "3.7.0",
     "tailwindcss": "4.3.3",
     "ts-extras": "1.3.0",
+    "varlock": "^1.22.0",
     "zod": "4.6.5"
   },
   "devDependencies": {
