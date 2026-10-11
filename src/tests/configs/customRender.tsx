@@ -1,11 +1,11 @@
-import { getQueryClient } from '@libs/reactQuery/client';
+import { getQueryClient } from '@libs/cssVariants/client';
 import { QueryClientProvider } from '@tanstack/react-query';
 import {
+  render,
+  renderHook,
   type RenderHookOptions,
   type RenderOptions,
   type RenderResult,
-  render,
-  renderHook,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {
@@ -16,6 +16,7 @@ import {
   type ReactNode,
   Suspense,
 } from 'react';
+
 const WrapperComponent = ({ children }: PropsWithChildren) => {
   const queryClient = getQueryClient();
   return (
