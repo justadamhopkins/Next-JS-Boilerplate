@@ -1,4 +1,3 @@
-// @ts-check
 import { varlockNextConfigPlugin } from '@varlock/nextjs-integration/plugin';
 
 /**
