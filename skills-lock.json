@@ -1,11 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
+    "modern-web-guidance": {
+      "source": "GoogleChrome/modern-web-guidance",
+      "sourceType": "github",
+      "skillPath": "skills/modern-web-guidance/SKILL.md",
+      "computedHash": "9e69ce00dc314b64f6664031b70295ea46c7de93ac682c624808df6e48e08b66"
+    },
     "varlock": {
       "source": "dmno-dev/varlock",
       "sourceType": "github",
       "skillPath": "skills/varlock/SKILL.md",
-      "computedHash": "dd6f7de5155f31c602c7b92361f832e32e12cb632feaadd0c0022740d0e5da5b"
+      "computedHash": ""
     }
   }
 }
