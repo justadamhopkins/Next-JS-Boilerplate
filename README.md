@@ -11,7 +11,7 @@ A modern, production-ready Next.js boilerplate with TypeScript, Tailwind CSS, an
 - 📖 **Storybook** - Component development and documentation
 - 🔍 **ESLint & Prettier** - Code quality and formatting
 - 🧩 **Base UI** - Unstyled, accessible React components
-- 📝 **React Hook Form + Zod** - Forms with schema validation
+- 🧵 **class-recipe** - Typed class name variants
 - 🔐 **Varlock** - Typed, validated environment variables
 - 🪝 **Husky** - Git hooks for code quality
 
@@ -77,14 +77,13 @@ pnpm test         # Run tests
 
 ## 🛠️ Tech Stack
 
-| Technology      | Purpose               |
-| --------------- | --------------------- |
-| Next.js         | React framework       |
-| TypeScript      | Type safety           |
-| Tailwind CSS    | Styling               |
-| Base UI         | Accessible components |
-| React Hook Form | Forms                 |
-| Zod             | Schema validation     |
-| Varlock         | Environment variables |
-| Vitest          | Testing               |
-| Storybook       | Component docs        |
+| Technology   | Purpose               |
+| ------------ | --------------------- |
+| Next.js      | React framework       |
+| TypeScript   | Type safety           |
+| Tailwind CSS | Styling               |
+| Base UI      | Accessible components |
+| class-recipe | Class name variants   |
+| Varlock      | Environment variables |
+| Vitest       | Testing               |
+| Storybook    | Component docs        |

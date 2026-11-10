@@ -7,6 +7,12 @@
       "skillPath": "skills/modern-web-guidance/SKILL.md",
       "computedHash": "9e69ce00dc314b64f6664031b70295ea46c7de93ac682c624808df6e48e08b66"
     },
+    "class-recipe": {
+      "source": "lynstack/recipe",
+      "sourceType": "github",
+      "skillPath": "packages/class-recipe/skills/class-recipe/SKILL.md",
+      "computedHash": "19f95892be8565f0cea9834a4b315f40b24c5fd53f03fe678faa736a72e85d81"
+    },
     "varlock": {
       "source": "dmno-dev/varlock",
       "sourceType": "github",
