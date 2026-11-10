@@ -14,15 +14,15 @@ importers:
       '@base-ui/react':
         specifier: 1.8.0
         version: 1.8.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@lynstack/class-recipe':
+        specifier: 1.7.3
+        version: 1.7.3
       '@tailwindcss/postcss':
         specifier: 4.3.3
         version: 4.3.3
       '@varlock/nextjs-integration':
         specifier: ^1.2.4
         version: 1.2.4(next@16.4.0(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.6.2)(babel-plugin-macros@3.1.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.22.0))(varlock@1.22.0)
-      css-variants:
-        specifier: 2.3.5
-        version: 2.3.5
       next:
         specifier: 16.4.0
         version: 16.4.0(@babel/core@7.29.7(supports-color@7.2.0))(@types/node@26.6.2)(babel-plugin-macros@3.1.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.22.0)
@@ -1485,6 +1485,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@lynstack/class-recipe@1.7.3':
+    resolution: {integrity: sha512-po1mcJ1WCMg236ZC18v7TMU8aoZS6G586MB5aU/Z0V2jeoUq0dWq7KLa10oSLRz5cuDPeTfOUu/x9/bh8iVv2g==}
+
+  '@lynstack/recipe@1.9.1':
+    resolution: {integrity: sha512-fAS88kcrDXY9uu1ql8PYz99shKvCSFmKic1tVF1tGdsIgvJxutJ5Igl78433DcFXtp912t9PAUXj8ytMP4sSXg==}
 
   '@mswjs/interceptors@0.41.9':
     resolution: {integrity: sha512-VVPPgHyQ6ShqnrmDWuxjmUIsO9gWyOZFmuOfLd9LfBGQJwZfy0gvv9pbHSJuoFNIYC7ZDX9aoFwowjcdSC4E8w==}
@@ -2985,9 +2991,6 @@ packages:
   css-tree@3.2.1:
     resolution: {integrity: sha512-X7sjQzceUhu1u7Y/ylrRZFU2FS6LRiFVp6rKLPg23y3x3c3DOKAwuXGDp+PAGjh6CSnCjYeAul8pcT8bAl+lSA==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
-
-  css-variants@2.3.5:
-    resolution: {integrity: sha512-ow3GINTXvpNML1RwJBXas1FwRSCkUxtGLUns4el4/Twtrt4BfkusEsADCYAjohX2Sg4Z+0BqNYE3kQwawMnmXw==}
 
   css-what@6.2.2:
     resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
@@ -6604,6 +6607,12 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
+  '@lynstack/class-recipe@1.7.3':
+    dependencies:
+      '@lynstack/recipe': 1.9.1
+
+  '@lynstack/recipe@1.9.1': {}
+
   '@mswjs/interceptors@0.41.9':
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
@@ -7946,8 +7955,6 @@ snapshots:
     dependencies:
       mdn-data: 2.27.1
       source-map-js: 1.2.1
-
-  css-variants@2.3.5: {}
 
   css-what@6.2.2: {}
 

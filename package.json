@@ -20,9 +20,9 @@
   },
   "dependencies": {
     "@base-ui/react": "1.8.0",
+    "@lynstack/class-recipe": "1.7.3",
     "@tailwindcss/postcss": "4.3.3",
     "@varlock/nextjs-integration": "^1.2.4",
-    "css-variants": "2.3.5",
     "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",

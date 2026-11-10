@@ -1,11 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
+    "class-recipe": {
+      "source": "lynstack/recipe",
+      "sourceType": "github",
+      "skillPath": "packages/class-recipe/skills/class-recipe/SKILL.md",
+      "computedHash": "19f95892be8565f0cea9834a4b315f40b24c5fd53f03fe678faa736a72e85d81"
+    },
     "varlock": {
       "source": "dmno-dev/varlock",
       "sourceType": "github",
       "skillPath": "skills/varlock/SKILL.md",
-      "computedHash": "dd6f7de5155f31c602c7b92361f832e32e12cb632feaadd0c0022740d0e5da5b"
+      "computedHash": ""
     }
   }
 }
